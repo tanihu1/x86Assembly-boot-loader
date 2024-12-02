@@ -76,7 +76,7 @@ print:
 	ret
 	
 
-msg: db "Assembly is not so bad.",0
+msg: 	db "Assembly is not so bad.",0
 
-times 510-($-$$) db 0
-dw 0xAA55
+	times 510-($-$$) db 0
+	dw 0xAA55
