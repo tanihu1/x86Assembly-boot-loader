@@ -23,3 +23,13 @@ clearscreen:
 	pop bp
 	ret
 	
+movecursor:
+	push bp
+	mov bp,sp
+	pusha
+
+	mov dx, [bp+4] ;Get the argument from the stack
+	mov ah, 0x02   ;Set cursor position
+	mov bh, 0x00   ;Setting page to 0 since double buffering is not used
+
+	
